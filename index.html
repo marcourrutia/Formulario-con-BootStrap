@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con BootStrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9b88fe55f1.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="">
+    <div class="container">
+        <!-- Formulario contenido en Card -->
+        <div class="card mt-3 border border-0 shadow-lg">
+            <!-- Card Header -->
+            <div class="card-header bg-dark text-white">
+                <h2>Payment form example</h2>
+            </div>
+            <div class="card-body bg-light-subtle">
+                <!-- Formulario -->
+                <form class="row g-3 needs-validation" novalidate id="miForm">
+                    <!-- Primera Fila -->
+                    <div class="col-5">
+                        <label for="cardNumber" class="form-label">Card #</label>
+                        <input type="text" class="form-control" id="cardNumber" required
+                            placeholder="XXXX XXXX XXXX XXXX">
+                        <div class="invalid-feedback">Campo obligatorio</div>
+                    </div>
+                    <div class="col-3">
+                        <label for="cvcNumber" class="form-label">CVC #</label>
+                        <input type="text" class="form-control" id="cvcNumber" placeholder="0000" required>
+                        <div class="invalid-feedback">Campo obligatorio</div>
+                    </div>
+                    <div class="col-4">
+                        <label for="amountMoney" class="form-label">Amount</label>
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="" class="form-control" id="amountMoney" placeholder="Amount" required>
+                            <div class="invalid-feedback">Campo obligatorio</div>
+                        </div>
+                    </div>
+                    <!-- Segunda Fila -->
+                    <div class="col-6">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" required>
+                        <div class="invalid-feedback">Campo obligatorio</div>
+                    </div>
+                    <div class="col-6">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" required>
+                        <div class="invalid-feedback">Campo obligatorio</div>
+                    </div>
+                    <!-- Tercera Fila -->
+                    <div class="col-6">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" required>
+                        <div class="invalid-feedback">Campo obligatorio</div>
+                    </div>
+                    <div class="col-3">
+                        <label for="state" class="form-label">State</label>
+                        <select id="state" class="form-select" required>
+                            <option value="" selected>Pick a state</option>
+                            <option value="1">Región de Arica y Parinacota</option>
+                            <option value="2">Región de Tarapacá</option>
+                            <option value="3">Región de Antofagasta</option>
+                            <option value="4">Región de Atacama</option>
+                            <option value="5">Región de Coquimbo</option>
+                            <option value="6">Región de Valparaíso</option>
+                            <option value="7">Región Metropolitana de Santiago</option>
+                            <option value="8">Región del Libertador General Bernardo O'Higgins</option>
+                            <option value="9">Región del Maule</option>
+                            <option value="10">Región de Ñuble</option>
+                            <option value="11">Región del Biobío</option>
+                            <option value="12">Región de La Araucanía</option>
+                            <option value="13">Región de Los Ríos</option>
+                            <option value="14">Región de Los Lagos</option>
+                            <option value="15">Región de Aysén del General Carlos Ibáñez del Campo</option>
+                            <option value="16">Región de Magallanes y de la Antártica Chilena</option>
+                        </select>
+                        <div class="invalid-feedback">Campo obligatorio</div>
+                    </div>
+                    <div class="col-3">
+                        <label for="postalCode" class="form-label">Postal Code</label>
+                        <input type="text" class="form-control" id="postalCode" required>
+                        <div class="invalid-feedback">Campo obligatorio</div>
+                    </div>
+                    <!-- Última Fila -->
+                    <div class="col-6">
+                        <!-- Metodos de Pago -->
+                        <label class="form-label">We accept:</label>
+                        <div class="input-group">
+                            <div class="input-group-text p-2 bg-dark">
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="payMethod" value="1" required>
+                                    <i class="fa-brands fa-cc-mastercard fa-2x"></i>
+                                </div>
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="payMethod" value="2" required>
+                                    <i class="fa-brands fa-cc-visa fa-2x"></i>
+                                </div>
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="payMethod" value="3" required>
+                                    <i class="fa-brands fa-cc-diners-club fa-2x"></i>
+                                </div>
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="payMethod" value="4" required>
+                                    <i class="fa-brands fa-cc-amazon-pay fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3" aria-describedby="messageHelp"
+                            required></textarea>
+                        <div id="messageHelp" class="form-text">Add any notes here.</div>
+                        <div class="invalid-feedback">Campo obligatorio</div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer d-flex justify-content-end bg-dark">
+                <button form="miForm" type="reset" id="resetButton" class="btn btn-outline-light m-1">Reset</button>
+                <button form="miForm" type="submit" class="btn btn-outline-primary m-1">Send</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+            // Resetear formulario
+            const resetButton = document.getElementById('resetButton')
+            resetButton.addEventListener('click', () => {
+                Array.from(forms).forEach(form => {
+                    form.classList.remove('was-validated')
+                })
+            })
+        })()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
